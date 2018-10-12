@@ -1,0 +1,47 @@
+{
+  "name": "black-scholes-solidity",
+  "version": "1.0.0",
+  "description": "On-chain estimation of the Black Scholes price for ATM option contracts",
+  "main": "README.md",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "chai-as-promised": "^7.1.1",
+    "ganache-cli": "^6.1.8",
+    "openzeppelin-solidity": "^1.12.0",
+    "prettier-eslint": "^8.8.2",
+    "sol-merger": "^0.1.2",
+    "solium-plugin-security": "^0.1.1",
+    "solium": "^1.1.8",
+    "solmd": "^0.3.0",
+    "surya": "^0.2.7"
+  },
+  "devDependencies": {
+    "black-scholes": "^1.1.0",
+    "black-scholes-js": "0.0.7",
+    "chai": "^4.2.0",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "implied-volatility": "^1.0.0",
+    "solc": "^0.4.25",
+    "solidity-coverage": "^0.5.11",
+    "solidity-graph": "git+https://github.com/RyanHendricks/solidity-graph.git",
+    "solidity-parser-antlr": "^0.3.2",
+    "truffle": "^4.1.14"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanHendricks/Black-Scholes-Solidity.git"
+  },
+  "author": "Ryan Hendricks <ryanhendricks@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanHendricks/Black-Scholes-Solidity/issues"
+  },
+  "homepage": "https://github.com/RyanHendricks/Black-Scholes-Solidity/#readme"
+}
