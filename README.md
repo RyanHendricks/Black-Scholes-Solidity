@@ -1,85 +1,40 @@
-Contract Starter Repo
+# Black Scholes Solidity
 
-clone this repo
+Highly accurate estimation of the Black-Scholes model prices for ATM options calculated on-chain
+
+## Black-Scholes Model Estimation
+
+The price for an option contract is a factor of the volatility of the underlying asset. One common model for determining the price is the Black-Scholes model, also known as the Black-Scholes-Merton model. Although it has some inaccuracies and drawbacks when used in real world scenarios it remains one of the most commonly used methods for pricing option contracts.
+
+## Potential Uses
+
+- On-chain price quotations for derivative contracts.
+- Self-hedging synthetic positions.
+- Volatility-adjusted transaction volume.
+
+## Planned Improvements
+
+- Precision handled by the contract rather than passed to the contract
+- The goal here is to ultimately be able to calculate the price for options other than those ATM.
+- Implementation of self-pricing mechanism based on logged historical prices
+- SafeMath integration
+- Gas Optimizations
+
+## Getting Started
+
+```bash
+npm install
+
+truffle develop
+
+# once console loads:
+> test
 ```
-./initrepo.sh
-```
 
+## Issues & Contributing
 
-useful package.json
+There are likely better ways to accomplish the goals of this project. Feel free to open an issue for any bugs that you may encounter or any suggestions you might desire to share.
 
-```javascript
-{
-  "name": "union-protocol-contracts",
-  "version": "0.0.1",
-  "description": "Smart Contracts for the Union Protocol",
-  "main": "README.md",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "null",
-    "graph:flow": "surya graph contracts/**/*.sol | dot -Tpng > build/flow/flow.png",
-    "graph:relate": "solidity-graph ./contracts --output ./build --colored",
-    "flat": "make merged contract='OathMusic' dir='contracts'",
-    "specs": "make specs contract='OathMusic' dir='build/merged/OathMusic'",
-    "lint": "solium --dir ./contracts",
-    "cleanup": "./scripts/cleanup.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TokenUnion/union-protocol-contracts.git"
-  },
-  "keywords": [
-    "Union",
-    "Protocol",
-    "Staking",
-    "Work",
-    "Tokens",
-    "Curators",
-    "Bonding",
-    "Distributed",
-    "Work"
-  ],
-  "author": "tokenunion.io",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TokenUnion/union-protocol-contracts/issues"
-  },
-  "homepage": "https://github.com/TokenUnion/union-protocol-contracts#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.6",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1",
-    "chai-bignumber": "^2.0.2",
-    "eslint": "^5.2.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-promise": "^3.8.0",
-    "openzeppelin-solidity": "1.11.0",
-    "prettier-eslint": "^8.8.2",
-    "sol-merger": "^0.1.2",
-    "solc": "^0.4.24",
-    "solidity-coverage": "^0.5.5",
-    "solidity-graph": "git+https://github.com/RyanHendricks/solidity-graph.git",
-    "solidity-parser-antlr": "^0.3.1",
-    "solium": "^1.1.8",
-    "solium-plugin-security": "^0.1.1",
-    "solmd": "^0.3.0",
-    "surya": "^0.2.7",
-    "zeppelin-solidity": "^1.11.0"
-  },
-  "dependencies": {
-    "eth-sig-util": "^2.0.1",
-    "ganache-cli": "^6.1.6",
-    "truffle": "^4.1.13"
-  }
-}
-```
+## Final Thoughts
+
+We as an industry have only begun to scratch the surface of blockchain implementations of financial derivatives. The problem which has hindered most assets up to this point is the ability to have on-chain pricing data that is also decentralized/trusted. Derivatives offer the possibility of removing the this necessity due to their inherent nature and relationship to an underlying asset. 
