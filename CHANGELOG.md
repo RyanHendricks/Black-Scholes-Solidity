@@ -2,7 +2,7 @@
 
 ## [Unreleased](https://github.com/RyanHendricks/Black-Scholes-Solidity/tree/HEAD)
 
-[Full Changelog](https://github.com/RyanHendricks/Black-Scholes-Solidity/compare/82b49d8fb755e5be090ebe81c07d813d9dbf16a1...HEAD)
+[Full Changelog](https://github.com/RyanHendricks/Black-Scholes-Solidity/compare/v1.0.2...HEAD)
 
 **Merged pull requests:**
 
@@ -12,6 +12,13 @@
 - Bump handlebars from 4.0.12 to 4.7.2 [\#4](https://github.com/RyanHendricks/Black-Scholes-Solidity/pull/4) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump mixin-deep from 1.3.1 to 1.3.2 [\#3](https://github.com/RyanHendricks/Black-Scholes-Solidity/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump lodash.merge from 4.6.1 to 4.6.2 [\#2](https://github.com/RyanHendricks/Black-Scholes-Solidity/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v1.0.2](https://github.com/RyanHendricks/Black-Scholes-Solidity/tree/v1.0.2) (2020-01-31)
+
+[Full Changelog](https://github.com/RyanHendricks/Black-Scholes-Solidity/compare/82b49d8fb755e5be090ebe81c07d813d9dbf16a1...v1.0.2)
+
+**Merged pull requests:**
+
 - Update version for contracts [\#1](https://github.com/RyanHendricks/Black-Scholes-Solidity/pull/1) ([RyanHendricks](https://github.com/RyanHendricks))
 
 
