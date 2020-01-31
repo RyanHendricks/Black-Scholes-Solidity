@@ -1,4 +1,4 @@
-pragma solidity ^0.4.23;
+pragma solidity ^0.5.13;
 
 
 contract BlackScholesEstimate {
@@ -25,13 +25,14 @@ contract BlackScholesEstimate {
      * @dev the decimal place must be moved prior to passing the params
      * @param numbers uint[] array of numbers to be used in calculation
      */
-    function stddev(uint[] numbers) public pure returns (uint256 sd) {
+    function stddev(uint[] memory numbers) public pure returns (uint256 sd) {
         uint sum = 0;
         for(uint i = 0; i < numbers.length; i++) {
             sum += numbers[i];
         }
         uint256 mean = sum / numbers.length;        // Integral value; float not supported in Solidity
         sum = 0;
+        uint i;
         for(i = 0; i < numbers.length; i++) {
             sum += (numbers[i] - mean) ** 2;
         }
@@ -65,10 +66,10 @@ contract BlackScholesEstimate {
      * @param _time uint256 days to expiration in years multiplied to remove decimals
      */
     function retBasedBlackScholesEstimate(
-        uint256[] _numbers,
+        uint256[] memory _numbers,
         uint256 _underlying,
         uint256 _time
-    ) public {
+    ) public pure {
         uint _vol = stddev(_numbers);
         blackScholesEstimate(_vol, _underlying, _time);
     }
